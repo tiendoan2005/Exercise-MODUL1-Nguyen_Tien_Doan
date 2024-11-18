@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table onsubmit="return false;">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="Amount" name="Amount">
+        </td>
+        <td>
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="submit" onclick="Convert()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <th>Result: <span id="Kq">0</span></th>
+    </tr>
+</table>
+<script>
+    let rates ={
+        USD:{VND:25000, USD:1},
+        VND:{USD:0.00004, VND:1}
+    };
+    function Convert(){
+        let Amount=parseFloat(document.getElementById("Amount").value);
+        let From=document.getElementById("From").value;
+        let To=document.getElementById("To").value;
+        if(!Amount||Amount<0){
+            alert("Vui lòng nhập đúng");
+        }
+    }
+</script>
+</body>
+</html>
