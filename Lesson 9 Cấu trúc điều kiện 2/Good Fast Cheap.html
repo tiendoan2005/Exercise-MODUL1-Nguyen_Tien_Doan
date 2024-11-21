@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Fast Cheap</title>
+    <style>
+        input[type="checkbox"] {
+            appearance: none;
+            position: relative;
+            display: inline-block;
+            left: 300px;
+            top:100px;
+            width:200px;
+            height:100px;
+            background: #d40505;
+            border-radius: 50px;
+        }
+        input[type="checkbox"]::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+        input[type="checkbox"]:checked:before {
+            left: 100px;
+            transition: 1s;
+        }
+        input[type="checkbox"]:checked {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="Heder">
+<input type="checkbox" id="good" onclick="choose('1')"><br>
+<input type="checkbox" id="fast" onclick="choose('2')"><br>
+<input type="checkbox" id="cheap" onclick="choose('3')"><br>
+</div>
+</body>
+</html>
+<script>
+    function choose(active) {
+        const good = document.getElementById('good');
+        const fast = document.getElementById('fast');
+        const cheap = document.getElementById('cheap');
+
+
+        if (active === '3') {
+            if (good.checked && fast.checked) {
+                good.checked = false;
+            }
+        }
+        else if (active === '1') {
+            if (fast.checked && cheap.checked) {
+                fast.checked = false;
+            }
+        }
+        else if (active === '2') {
+            if (good.checked && cheap.checked) {
+                cheap.checked = false;
+            }
+        }
+    }
+</script>
