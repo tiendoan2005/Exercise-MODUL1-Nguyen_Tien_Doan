@@ -1,0 +1,85 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body>
+<p>Sử dụng với for</p>
+<script>
+    var sout;
+    sout="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    for (i=1;i<=10;i++){
+        sout = sout +"<tr>";
+        for(j=1;j<=10;j++){
+            sout=sout + "<td>" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+<p>Sử dụng với while</p>
+<script>
+    var sout,i,j;
+    sout="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while(i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 10) {
+            sout = sout + "<td>" + i * j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body>
+<p>Sử dụng với for</p>
+<script>
+    var sout;
+    sout="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    for (i=1;i<=10;i++){
+        sout = sout +"<tr>";
+        for(j=1;j<=10;j++){
+            sout=sout + "<td>" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+<p>Sử dụng với while</p>
+<script>
+    var sout,i,j;
+    sout="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while(i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 10) {
+            sout = sout + "<td>" + i * j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
+>>>>>>> 36718e7d04d5c2e80d0b5a4ad57a1d4593221ae0
