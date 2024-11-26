@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+<p>Dãy Fibonacci là 1 dãy vô hạn nên sẽ hiển thị 100 số đầu</p>
+<script>
+    let F0=0;F1=1;F2=1;
+    document.write("F0 = "+F0+"<br>")
+    document.write("F1 = "+F1+"<br>")
+    document.write("F2 = "+F2+"<br>")
+    for(let i=3;i<=100;i++){
+        let F3=F1+F2;
+        document.write("F"+i+" = "+F3+"<br>");
+        F1=F2;
+        F2=F3;
+    }
+</script>
+</body>
+</html>
