@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chữ</title>
+</head>
+<body>
+<script>
+    let text = prompt("Nhập vào dòng chữ của bạn ");
+    let convert = text.split("").map(transfer => {
+        if (transfer === transfer.toLowerCase()) {
+            return transfer.toUpperCase();
+        } else {
+            return transfer.toLowerCase();
+        }
+    }).join("")
+    alert("Chuỗi đã chuyển đổi:" + convert);
+</script>
+</body>
+</html>
