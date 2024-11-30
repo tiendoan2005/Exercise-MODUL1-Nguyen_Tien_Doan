@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được</title>
+</head>
+<body>
+<script>
+    let doanhSo=parseInt(prompt("Nhập vào doanh thu tháng (triệu đồng)"));
+    let rose = 0;
+     if(doanhSo < 10){
+         rose= doanhSo * 0.05 // 5% hoa hồng
+     }else if (doanhSo >= 10 && doanhSo <= 50) {
+         rose = doanhSo * 0.10; // 10% hoa hồng
+     } else if (doanhSo > 50) {
+         rose = doanhSo * 0.2; // 20% hoa hồng
+     }else{
+         document.write("doanh số không hợp lệ!");
+     }
+     if(rose > 0){
+         document.write("Doanh số: " + doanhSo + " triệu đồng" + "<br>");
+         document.write("Hoa hồng nhận được: " + rose + "triệu đồng");
+     }
+</script>
+</body>
+</html>

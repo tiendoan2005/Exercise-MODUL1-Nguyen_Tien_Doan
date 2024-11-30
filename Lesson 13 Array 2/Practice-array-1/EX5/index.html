@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function Chuoi(nums) {
+        let value = nums.toLowerCase();
+        let chuoiAm = "ueoai";
+        let dem = 0;
+        for (let i = 0; i < value.length; i++) {
+            if (chuoiAm.includes(value[i])) {
+                dem++
+            }
+        }
+        return dem;
+    }
+
+    let nums = prompt("Nhập chuỗi: ");
+    document.write("Chuỗi của bạn: " + nums + "<br>");
+    document.write("Số lượng số nguyên âm trong chuỗi là: " + Chuoi(nums));
+</script>
+</body>
+</html>

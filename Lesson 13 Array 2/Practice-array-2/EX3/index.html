@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let Array = [];
+    let size = prompt("Nhập vào số lượng ký tự trong mảng: ");
+    for (let i = 0; i < size; i++) {
+        const Nhap = prompt("Nhập vào kí tự bất kì thứ " + i + " :");
+        Array.push(Nhap);
+    }
+    document.write(Array.join(", ") + "<br>");
+    let dem = 0;
+    for (let i = 0; i < Array.length; i++) {
+        if (Array[i] % 1 === 0) {
+            dem++;
+        }
+    }
+    document.write("Số ký tự số trong mảng là: " + dem);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt("Nhập phần tử mảng a thứ " + i);
+    }
+    document.write("Mảng a: " + a.join(" ") + "<br>")
+    for (let i = 0; i < 10; i++) {
+        b[i] = prompt("Nhập phần tử mảng b thứ " + i);
+    }
+    document.write("Mảng b: " + b.join(" ") + "<br>");
+    let c = a.concat(b);
+    document.write("Mảng c (nối từ mảng a và b): " + c.join(" "));
+</script>
+</body>
+</html>
