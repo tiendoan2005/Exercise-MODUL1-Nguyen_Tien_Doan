@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi</title>
+</head>
+<body>
+<script>
+    function tinhLaiKep(tienGoc, laiSuatThang, soThang) {
+        let tongTien = tienGoc;
+        for (let i = 1; i <= soThang; i++) {
+            tongTien += tongTien * (laiSuatThang / 100);
+        }
+        return tongTien;
+    }
+    const tienGoc = parseFloat(prompt("Nhập số tiền gửi ban đầu (VND):"));
+    const laiSuatThang = parseFloat(prompt("Nhập lãi suất hàng tháng (%):"));
+    const soThang = parseInt(prompt("Nhập số tháng gửi:"));
+    if (isNaN(tienGoc) || isNaN(laiSuatThang) || isNaN(soThang) || tienGoc <= 0 || laiSuatThang <= 0 || soThang <= 0) {
+        alert("Vui lòng nhập các giá trị hợp lệ (lớn hơn 0).");
+    } else {
+        const tongTienSauKyHan = tinhLaiKep(tienGoc, laiSuatThang, soThang);
+        alert(`Số tiền sau ${soThang} tháng là: ${tongTienSauKyHan.toFixed(2)} VND`);
+    }
+
+</script>
+
+</body>
+</html>
