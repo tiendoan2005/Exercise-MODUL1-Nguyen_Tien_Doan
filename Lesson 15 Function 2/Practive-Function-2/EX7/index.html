@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số a: "));
+    let b = parseInt(prompt("Nhập số b: "));
+    document.write("Trước khi đổi chỗ : " + "a= " + a + ", b= " + b + "<br/>");
+
+    function changePlaces() {
+        let temp = a;
+        a = b;
+        b = temp
+        return "a= " + a + ", b= " + b;
+        //Cách 2
+        //let Array=[a,b];
+        //Array.reverse();
+        //return Array;
+    }
+
+    document.write("Sau khi đổi chỗ : " + changePlaces())
+    //Cách 2
+    //document.write("Sau khi đổi chỗ : " + changePlaces(Array))
+</script>
+</body>
+</html>

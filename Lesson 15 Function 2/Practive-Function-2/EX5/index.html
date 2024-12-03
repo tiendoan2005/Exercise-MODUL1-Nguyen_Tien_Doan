@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function MinNumbers() {
+        let a = [];
+        for (let i = 0; i < 3; i++) {
+            nums = parseInt(prompt("Nhập vào số thứ: " + i));
+            a.push(nums);
+        }
+        let min = a[0];
+        for (let i = 1; i < a.length; i++) {
+            if (a[i] < min) {
+                min = a[i];
+            }
+        }
+        return min;
+    }
+
+    document.write("Số nhỏ nhất trong 3 số là: " + MinNumbers())
+</script>
+</body>
+</html>

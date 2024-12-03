@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Do you love me</title>
+    <style>
+        #nooo{
+            position: absolute;
+        }
+        #header{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>Do You Love Me</h1>
+    <img src="https://thumbs.dreamstime.com/b/do-you-love-me-text-red-heart-paper-hand-holding-shape-concept-to-ask-some-couple-need-156686240.jpg" alt="Danh to tình tôi" style="width: 200px"><br>
+    <input type="button" value="Yes" onclick="clickss('yes')">
+    <input type="button" value="No" onmouseover="clickss('no')" id="nooo">
+</div>
+</body>
+</html>
+<script>
+    function clickss(values){
+        debugger;
+        if(values === "yes"){
+            alert("Yes! I love you too <3");
+        }
+        else if(values === "no"){
+            let a = Math.random() * (window.innerWidth -100);
+            let b = Math.random() * (window.innerHeight - 50);
+            console.log(a)
+            document.getElementById("nooo").style.left = a + 'px';
+            document.getElementById("nooo").style.top = b + 'px';
+        }
+
+    }
+</script>
