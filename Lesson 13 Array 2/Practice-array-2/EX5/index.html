@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào chuỗi a: ");
+    let Arraya = a.split("");
+    document.write(Arraya + "<br>");
+    let b = prompt("Nhập vào chuỗi b: ");
+    let Arrayb = b.split("");
+    document.write(Arrayb + "<br>");
+    let check=true;
+    if(Arraya.length !== Arrayb.length){
+        check=false;
+    }else{
+        for (let i=0;i<Arraya.length;i++){
+            if(Arraya[i] !== Arrayb[i]){
+                check=false;
+                break;
+            }
+        }
+    }
+    if(check){
+        document.write("2 chuỗi giống nhau !")
+    }else{
+        document.write("2 chuỗi không giống nhau !");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form>
+    <input type="text" id="text" placeholder="Nhập vào từ bạn muốn dịch">
+    <button type="button" onclick="Convert()">Dịch</button>
+    <div id="Kq"></div>
+</form>
+<script>
+    function Convert() {
+        let text = document.getElementById("text").value;
+        let Eng = ["black", "red", "yellow", "gray", "green", "white", "blue"];
+        let Vie = ["đen", "đỏ", "vàng", "xám", "xanh lá", "trắng", "xanh biển"];
+        let Value;
+        for (let i = 0; i < Eng.length; i++) {
+            if (Eng[i] === text) {
+                Value = i;
+                for (let j = 0; j < Vie.length; j++) {
+                    if (Value === j) {
+                        result = Vie[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("Kq").textContent = "màu " + result
+    }
+</script>
+</body>
+</html>

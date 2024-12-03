@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập bán kính hình tròn: "));
+
+    function AreaCircle() {
+        area = 2 * Math.PI * a;
+        return area;
+    }
+
+    function CircumferenceCircle() {
+        S = Math.PI * Math.pow(a, 2);
+        return S;
+    }
+
+    document.write("Chu vi hình tròn là: " + AreaCircle().toFixed(2) + "(cm)" + "<br>")
+    document.write("Diện tích hình tròn là: " + CircumferenceCircle().toFixed(2) + "(cm^2)" + "<br>")
+</script>
+</body>
+</html>

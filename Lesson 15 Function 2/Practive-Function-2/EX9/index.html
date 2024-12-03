@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    function Comparison() {
+        let Array = [];
+        let a = parseInt(prompt("Nhập vào số lượng kí tự:"));
+        for (let i = 0; i < a; i++) {
+            let addCharacter = prompt("Nhập vào kí tự thứ " + i);
+            Array.push(addCharacter);
+        }
+        document.write(Array.join(" ") + "<br>");
+        let character = prompt("Nhập ký tự của bạn: ");
+        let dem = 0;
+        let Checks = false;
+        for (let i = 0; i < Array.length; i++) {
+            if (character === Array[i]) {
+                Checks = true
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            return -1
+        }
+        return dem;
+    }
+
+    let Kq = Comparison();
+    if (Kq === -1) {
+        document.write("Ký tự không xuất hiện trong mảng (trả về -1)!");
+    } else {
+        document.write("Số lần kí tự xuất hiện trong mảng: " + Kq);
+    }
+</script>
+</body>
+</html>

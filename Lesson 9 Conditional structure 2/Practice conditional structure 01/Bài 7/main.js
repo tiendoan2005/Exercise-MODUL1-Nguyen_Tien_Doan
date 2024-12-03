@@ -1,0 +1,12 @@
+let servicePackage=parseInt(prompt("Nhập số tiền cước bạn sử dụng tháng này: "));
+let internalNetwork=parseInt(prompt("Nhập số phút gọi nội mạng: "));
+let externalNetwork=parseInt(prompt("Nhập số phút gọi ngoại mạng: "));
+let message=parseInt(prompt("Nhập số lượng tin nhắn gửi đi: "));
+let Data=parseInt(prompt("Nhập số GB bạn sử dụng: "));
+sum =servicePackage + internalNetwork * 200  + externalNetwork * 500 + message * 200 +Data * 15.000;
+document.write("Số tiền cước tháng này của bạn: "+ servicePackage+ " đồng<br>");
+document.write("Số phút gọi nội mạng tháng này của bạn : "+ internalNetwork+" phút<br>");
+document.write("Số phút gọi ngoại mạng tháng này của bạn: "+ externalNetwork+" phút<br>");
+document.write("Số tin nhắn bạn gửi đi tháng này: "+ message+" tin nhắn<br>");
+document.write("Số GB bạn sử dụng tháng này: "+ Data+" GB<br>");
+document.write("Tổng số tiền cước thuê bao tháng này của bạn: "+ sum+" đồng<br>");
