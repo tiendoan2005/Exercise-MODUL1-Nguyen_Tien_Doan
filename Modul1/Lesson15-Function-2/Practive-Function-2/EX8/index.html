@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    function RevesreArray() {
+        let a = parseInt(prompt("Nhập vào số lượng: "));
+        let Array = [];
+        for (let i = 0; i < a; i++) {
+            let add = parseInt(prompt("Nhập vào số nguyên thứ " + i));
+            Array.push(add);
+        }
+        document.write("Array: " + Array.join(" ") + "<br>")
+        Array.reverse();
+        return Array;
+    }
+
+    document.write("Mảng đảo ngược là: " + RevesreArray().join(" "));
+</script>
+</body>
+</html>
