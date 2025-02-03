@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function Find() {
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        document.write("Star: " + star.join(", "));
+        document.write("<br>");
+        let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        document.write("Constellation: " + constellation.join(", "));
+        document.write("<br>")
+        let checks=false;
+        let starIndex;
+        for (let i = 0; i < star.length && i < constellation.length; i++) {
+            if (Stars === star[i]) {
+                checks=true;
+                starIndex=i;
+                break;
+            }
+        }
+        if(checks){
+            document.write("Chòm sao đã tìm kiếm: " + constellation[starIndex]);
+        }else{
+            document.write("Không tìm thấy chòm sao nào!");
+        }
+    }
+    let Stars = prompt("Nhập vào tên ngôi sao: ");
+    Find();
+</script>
+</body>
+</html>

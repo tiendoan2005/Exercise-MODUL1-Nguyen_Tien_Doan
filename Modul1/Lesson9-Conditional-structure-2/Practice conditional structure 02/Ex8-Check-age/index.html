@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số tuổi</title>
+</head>
+<body>
+<script>
+    let age;
+    do {
+         age = Number.parseInt(prompt("Nhập vào số tuổi của bạn: "));
+        if(isNaN(age) || age <0){
+            alert("Vui lòng nhập đúng số tuổi");
+        }else if(age > 120){
+            alert("Thông tin số tuổi cao nhất hiên tại chỉ là 120 tuổi:))");
+        }
+    }while (isNaN(age) || age <0 || age > 120)
+    if(age>0 && age <120){
+        alert("Số tuổi của bạn hợp lệ!"  + " Tuổi của bạn là: "+ age);
+    }
+</script>
+</body>
+</html>

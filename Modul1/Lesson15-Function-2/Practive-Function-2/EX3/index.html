@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập vào a: "));
+
+    function Factorial() {
+        let result = 1;
+        for (let i = a; i > 0; i--) {
+            result *= i;
+        }
+        return result;
+    }
+
+    document.write("Giai thừa của " + a + " là " + Factorial());
+</script>
+</body>
+</html>

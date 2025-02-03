@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính giá điện </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Bảng giá điện sinh hoạt hiện nay</h1>
+<table border="2" style="border-collapse: collapse; width: 600px">
+  <tr>
+    <th>Bậc</th>
+    <th>Giá bán lẻ điện cho sinh hoạt</th>
+    <th>Giá bán điện(đồng/kWh)</th>
+  </tr>
+  <tr>
+    <th colspan="2">Giá bán lẻ điện sinh hoạt </th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Bậc 1</th>
+    <td>Từ 0 - 50 kWh</td>
+    <td>1.806</td>
+  </tr>
+  <tr>
+    <th>Bậc 2</th>
+    <td>Từ 51 - 100 kWh</td>
+    <td>1.866</td>
+  </tr>
+  <tr>
+    <th>Bậc 3</th>
+    <td>Từ 101 - 200 kWh</td>
+    <td>2.167</td>
+  </tr>
+  <tr>
+    <th>Bậc 4</th>
+    <td>Từ 201 - 300 kWh</td>
+    <td>2.729</td>
+  </tr>
+  <tr>
+    <th>Bậc 5</th>
+    <td>Từ 301 - 400 kWh</td>
+    <td>3.050</td>
+  </tr>
+  <tr>
+    <th>Bậc 6</th>
+    <td>Từ 401 trở lên kWh</td>
+    <td>3.151</td>
+  </tr>
+</table>
+<br>
+<input type="text" id="Bac" placeholder="Nhập số kWh bạn sử dụng: ">
+<button type="button" onclick="Convert()">Tính</button>
+<p><span id="Kq">0</span></p>
+</body>
+</html>
+<script src="main.js"></script>
