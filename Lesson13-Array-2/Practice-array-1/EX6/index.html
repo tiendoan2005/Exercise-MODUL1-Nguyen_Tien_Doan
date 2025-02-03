@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        a.push(Math.floor(Math.random() * 20) + 1);
+        document.write(a[i] + " ");
+    }
+    document.write("<br/>");
+    let nums=parseInt(prompt("Nhập vào giá trị V của bạn: "));
+    let found=false;
+    for(let i=0;i<a.length;i++){
+        if(a[i]===nums){
+            found=true;
+            break;
+        }
+    }
+    if(found){
+        document.write("V của bạn: "+nums+"<br>")
+        document.write("V is in the array")
+    }else{
+        document.write("V của bạn: "+nums+"<br>")
+        document.write("V is not in the array")
+    }
+</script>
+</body>
+</html>

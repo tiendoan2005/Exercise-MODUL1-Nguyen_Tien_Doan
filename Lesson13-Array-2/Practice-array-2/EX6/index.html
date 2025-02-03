@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let Array = [];
+    let num = parseInt(prompt("Nhập số lượng kí tự: "));
+    for (let i = 0; i < num; i++) {
+        let a = prompt("Nhập các kí tự vào mảng a phần tử: " + i);
+        Array.push(a);
+    }
+    document.write("Hàm trước khi thay đổi: " + Array.join(" ") + "<br>");
+    for (let i = 0; i < Array.length; i++) {
+        if (Array[i] === "-") {
+            Array[i] = "_";
+        }
+    }
+    document.write("Hàm sau khi thay đổi: " + Array)
+</script>
+</body>
+</html>

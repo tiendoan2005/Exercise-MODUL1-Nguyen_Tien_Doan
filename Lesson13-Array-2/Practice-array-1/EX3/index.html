@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập vào số phần tử bạn muốn: "));
+    let sum=0;
+    let a = [];
+    for (let i = 0; i < num; i++) {
+        a.push(Math.floor(Math.random() * 100) + 1);
+        document.write(a[i] + " ")
+        sum+=a[i];
+    }
+    document.write("<br/>")
+    let max=a[0];
+    for(let i=0;i<a.length;i++){
+        if(a[i]>max){
+            max=a[i];
+        }
+    }
+    document.write("Số lớn nhất bằng: "+max+"<br/>");
+    document.write("AVG của dãy là: "+(sum/num).toFixed(2));
+</script>
+</body>
+</html>

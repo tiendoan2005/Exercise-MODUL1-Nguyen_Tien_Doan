@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Game</title>
+    <style>
+        img {
+            width: 500px;
+            height: auto;
+            margin-left: 500px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<img id="pic1" src="img/cat1.jpg" alt="" onclick="Pic(1)"><br>
+<img id="pic2" src="img/monkey2.jpg" alt="" onclick="Pic(2)"><br>
+<img id="pic3" src="img/pan3.jpg" alt="" onclick="Pic(3)"><br>
+<img id="pic4" src="img/monkey4.jpg" alt="" onclick="Pic(4)"><br>
+<img id="pic5" src="img/cat5.jpg" alt="" onclick="Pic(5)"><br>
+<div id="checked" style="text-align: center; font-size: 50px"></div>
+
+<script>
+    function Pic(n) {
+        let img1 = document.getElementById("pic1");
+        let img2 = document.getElementById("pic2");
+        let img3 = document.getElementById("pic3");
+        let img4 = document.getElementById("pic4");
+        let img5 = document.getElementById("pic5");
+
+        if (n === 1) {
+            if (img1.src.includes("cat1.jpg")) {
+                img1.src = "img/pan1.jpg";
+            } else if (img1.src.includes("pan1.jpg")) {
+                img1.src = "img/monkey1.jpg";
+            } else {
+                img1.src = "img/cat1.jpg";
+            }
+        }
+        if (n === 2) {
+            if (img2.src.includes("cat2.jpg")) {
+                img2.src = "img/pan2.jpg";
+            } else if (img2.src.includes("pan2.jpg")) {
+                img2.src = "img/monkey2.jpg";
+            } else {
+                img2.src = "img/cat2.jpg";
+            }
+        }
+        if (n === 3) {
+            if (img3.src.includes("cat3.jpg")) {
+                img3.src = "img/pan3.jpg";
+            } else if (img3.src.includes("pan3.jpg")) {
+                img3.src = "img/monkey3.jpg";
+            } else {
+                img3.src = "img/cat3.jpg";
+            }
+        }
+        if (n === 4) {
+            if (img4.src.includes("cat4.jpg")) {
+                img4.src = "img/pan4.jpg";
+            } else if (img4.src.includes("pan4.jpg")) {
+                img4.src = "img/monkey4.jpg";
+            } else {
+                img4.src = "img/cat4.jpg";
+            }
+        }
+        if (n === 5) {
+            if (img5.src.includes("cat5.jpg")) {
+                img5.src = "img/pan5.jpg";
+            } else if (img5.src.includes("pan5.jpg")) {
+                img5.src = "img/monkey5.jpg";
+            } else {
+                img5.src = "img/cat5.jpg";
+            }
+        }
+        checkAllMatch();
+    }
+
+    function checkAllMatch() {
+        const img1 = document.getElementById("pic1").getAttribute("src");
+        const img2 = document.getElementById("pic2").getAttribute("src");
+        const img3 = document.getElementById("pic3").getAttribute("src");
+        const img4 = document.getElementById("pic4").getAttribute("src");
+        const img5 = document.getElementById("pic5").getAttribute("src");
+        if (
+            img1 === "img/cat1.jpg" &&
+            img2 === "img/cat2.jpg" &&
+            img3 === "img/cat3.jpg" &&
+            img4 === "img/cat4.jpg" &&
+            img5 === "img/cat5.jpg"
+        ) {
+            document.getElementById("checked").textContent = "Chúc mừng";
+        } else if (
+            img1 === "img/monkey1.jpg" &&
+            img2 === "img/monkey2.jpg" &&
+            img3 === "img/monkey3.jpg" &&
+            img4 === "img/monkey4.jpg" &&
+            img5 === "img/monkey5.jpg") {
+            document.getElementById("checked").textContent = "Chúc mừng";
+        } else if (
+            img1 === "img/pan1.jpg" &&
+            img2 === "img/pan2.jpg" &&
+            img3 === "img/pan3.jpg" &&
+            img4 === "img/pan4.jpg" &&
+            img5 === "img/pan5.jpg"){
+                document.getElementById("checked").textContent = "Chúc mừng";
+            }else{
+            document.getElementById("checked").textContent=" ";
+        }
+    }
+</script>
+</body>
+</html>
