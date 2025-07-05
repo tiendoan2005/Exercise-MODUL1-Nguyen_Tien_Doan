@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.light {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gray;
+    display: inline-block;
+    margin-top: 20px;
+}
+.switch {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
